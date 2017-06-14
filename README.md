@@ -11,3 +11,5 @@ also look there for what you need to edit.
 Current look
 
 ![i3 look](http://i.imgur.com/F7KsZfF.png)
+
+![i3 look](http://i.imgur.com/tqZH68d.png)
