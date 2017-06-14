@@ -13,3 +13,5 @@ Current look
 ![i3 look](http://i.imgur.com/F7KsZfF.png)
 
 ![i3 look](http://i.imgur.com/tqZH68d.png)
+
+![i3 look](http://i.imgur.com/k1xQqpt.png)
