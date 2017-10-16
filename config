@@ -179,27 +179,31 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar 
+bar
 	{
 #output DVI-I-1
 	status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
-	tray_output DVI-I-1
+	tray_output HDMI-0
 	}
+
+# set display hdmi-0
+exec xrandr --output HDMI-0 --mode 1920x1080
 
 # Screensaver Settings
 exec --no-startup-id xset dpms 600
-exec --no-startup-id xautolock -time 30 -locker electricsheep
+
+# exec --no-startup-id xautolock -time 30 -locker electricsheep
 
 # Lock screen
-bindsym $mod+F9 exec i3lock -c 000000 -i /home/mathisen/Images/lock.png
+bindsym $mod+F9 exec i3lock -c 000000 -i /home/mathisen/images/lock.png
 
 # Floating programs
-for_window [class="Pavucontrol"] floating enable 
+for_window [class="Pavucontrol"] floating enable
 for_window [class="Pavucontrol"] resize shrink left 100, resize shrink right 100, resize shrink down 50, resize shrink up 50
 
 # Assign programs to specific workspace
 assign [class="Chromium"] Browser 
-assign [class="Thunar"] FileManager  
+assign [class="Thunar"] FileManager 
 
 # Pulse Audio Controls
 bindsym $mod+F12 exec pamixer -i 5
@@ -208,7 +212,7 @@ bindsym $mod+F4  exec wal -i /home/mathisen/images/wallpaper.jpg
 bindsym $mod+shift+F12 exec pamixer --set-volume 0
 
 # Wallpaper settings
-exec_always feh --bg-scale /home/mathisen/images/wallpaper.jpg
+exec_always feh --bg-scale --randomize /home/mathisen/images/Spotlight
 
 # Auto exec settings
 exec chromium
