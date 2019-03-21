@@ -195,7 +195,7 @@ exec --no-startup-id xset dpms 600
 # exec --no-startup-id xautolock -time 30 -locker electricsheep
 
 # Lock screen
-bindsym $mod+F9 exec i3lock -c 000000 -i /home/mathisen/images/lock.png
+bindsym $mod+F9 exec i3lock -c 000000 -i /home/mathisen/Images/lock.png
 
 # Floating programs
 for_window [class="Pavucontrol"] floating enable
@@ -208,11 +208,10 @@ assign [class="Thunar"] FileManager 
 # Pulse Audio Controls
 bindsym $mod+F12 exec pamixer -i 5
 bindsym $mod+F11 exec pamixer -d 5
-bindsym $mod+F4  exec wal -i /home/mathisen/images/wallpaper.jpg
 bindsym $mod+shift+F12 exec pamixer --set-volume 0
 
 # Wallpaper settings
-exec_always feh --bg-scale --randomize /home/mathisen/images/Spotlight
+exec_always feh --bg-scale --randomize /home/mathisen/Images
 
 # Auto exec settings
 exec chromium
@@ -223,5 +222,13 @@ bindsym $mod+F5 exec pavucontrol
 bindsym $mod+F6 exec thunar
 bindsym $mod+F8 exec xfce4-screenshooter
 
-# Set Swedish keyboard
+#            EDIT THIS SO IT FIT YOUR NEEDS
+# ======================================================
+
+# Set Swedish keyboard 
 exec setxkbmap se
+
+# Set resoultion
+exec xrandr --output VGA-1 --mode 1920x1080
+
+# ======================================================
